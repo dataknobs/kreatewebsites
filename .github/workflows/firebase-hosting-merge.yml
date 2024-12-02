@@ -20,9 +20,12 @@ jobs:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
           NEXT_PUBLIC_STRIPE_SECRET_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_SECRET_KEY }}
 
-      # Authenticate using service account and set the GOOGLE_APPLICATION_CREDENTIALS
+      # Save the service account key to a file and set GOOGLE_APPLICATION_CREDENTIALS
       - run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_DATAKNOBS_PUBLIC }}" > service-account.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS="service-account.json"
+      
+      # Authenticate Firebase CLI using the service account
+      - run: firebase use --add
 
       # Enable the webframeworks experiment
       - run: firebase experiments:enable webframeworks
