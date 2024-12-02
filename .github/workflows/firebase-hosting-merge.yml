@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       # Install Firebase CLI
       - run: npm install -g firebase-tools
 
@@ -20,11 +20,11 @@ jobs:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
           NEXT_PUBLIC_STRIPE_SECRET_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_SECRET_KEY }}
 
-      # Authenticate with Firebase using the service account secret
+      # Authenticate with Firebase using the service account JSON directly
       - run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_DATAKNOBS_PUBLIC }}" > service-account.json
-      - run: firebase login:ci --token "${{ secrets.FIREBASE_CI_TOKEN }}"
+      - run: firebase use --add dataknobs-public --token "${{ secrets.FIREBASE_CI_TOKEN }}"
 
       # Deploy to the specific hosting target
-      - run: firebase deploy --only hosting:kreatewebsites-main
+      - run: firebase deploy --only hosting:kreatewebsites-main --token "${{ secrets.FIREBASE_CI_TOKEN }}"
         env:
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DATAKNOBS_PUBLIC }}
