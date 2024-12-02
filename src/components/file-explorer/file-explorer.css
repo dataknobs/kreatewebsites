@@ -1,0 +1,34 @@
+.item-card {
+  transition: transform 0.2s;
+}
+
+.item-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted {
+  border: 2px solid #007bff; /* Bootstrap primary color */
+}
+
+.breadcrumb {
+  background: transparent; /* Remove background if desired */
+}
+
+.back-icon:hover {
+  cursor: pointer;
+}
+
+.custom-dropdown-toggle {
+  color: var(--bs-primary) !important; /* Primary text color */
+}
+
+.custom-dropdown:hover .custom-dropdown-toggle, /* Hovering over the entire dropdown */
+  .custom-dropdown-toggle:focus {
+  background-color: var(--bs-primary); /* Primary background on hover */
+  color: white !important; /* Text turns white on hover */
+}
+
+.custom-dropdown {
+  display: inline-block;
+}

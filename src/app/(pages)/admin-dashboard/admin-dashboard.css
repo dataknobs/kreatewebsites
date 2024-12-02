@@ -1,0 +1,37 @@
+.admin-dashboard-container {
+  padding: 20px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-success,
+.btn-primary,
+.btn-danger {
+  border-radius: 50px;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}

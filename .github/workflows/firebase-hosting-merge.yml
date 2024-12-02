@@ -1,0 +1,30 @@
+name: Deploy to Firebase Hosting on merge
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Install Firebase CLI
+      - run: npm install -g firebase-tools
+
+      # Run the build process
+      - run: npm ci && npm run build
+        env:
+          NEXT_PUBLIC_CLOUD_VERSION: ${{ secrets.NEXT_PUBLIC_CLOUD_VERSION }}
+          NEXT_PUBLIC_PLAN_KEY: ${{ secrets.NEXT_PUBLIC_PLAN_KEY }}
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
+          NEXT_PUBLIC_STRIPE_SECRET_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_SECRET_KEY }}
+
+      # Authenticate with Firebase using the service account secret
+      - run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_DATAKNOBS_PUBLIC }}" > service-account.json
+      - run: firebase login:ci --token "${{ secrets.FIREBASE_CI_TOKEN }}"
+
+      # Deploy to the specific hosting target
+      - run: firebase deploy --only hosting:kreatewebsites-main
+        env:
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DATAKNOBS_PUBLIC }}

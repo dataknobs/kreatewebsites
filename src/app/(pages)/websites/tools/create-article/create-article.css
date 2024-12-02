@@ -1,0 +1,55 @@
+.frosted-glass-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.frosted-step {
+  background: rgba(255, 255, 255, 0.5);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(75, 0, 130, 0.1);
+}
+
+.frosted-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(75, 0, 130, 0.2);
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.icon-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+.custom-input input {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-input input:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(75, 0, 130, 0.3);
+}
+
+.animated-btn {
+  background: linear-gradient(90deg, #4b0082, #6a0dad);
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(75, 0, 130, 0.4);
+}
+
+.animated-btn:hover {
+  background: linear-gradient(90deg, #6a0dad, #4b0082);
+  box-shadow: 0 6px 18px rgba(75, 0, 130, 0.6);
+}

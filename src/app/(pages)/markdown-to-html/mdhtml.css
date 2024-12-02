@@ -1,0 +1,47 @@
+.card {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+}
+
+.sticky-top {
+  background-color: #1363c6 !important;
+  border-bottom: 10px solid #0d6efd !important;
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  padding: 1rem;
+  position: relative;
+}
+
+.card-body {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  flex: 1;
+}
+
+textarea {
+  border-radius: 8px;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.card-equal-height {
+  min-height: 550px; /* Ensure both cards are of equal height */
+  min-width: 550px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.card-header .btn-icon {
+  margin-left: auto;
+}

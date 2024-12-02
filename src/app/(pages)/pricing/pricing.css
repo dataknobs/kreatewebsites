@@ -1,0 +1,146 @@
+.sticky-top {
+  background-color: #1363c6 !important;
+  border-bottom: 10px solid #0d6efd !important;
+}
+
+.pricing-header {
+  padding-bottom: 2% !important;
+}
+
+.custom-table {
+  border: 1px solid rgba(141, 141, 141, 0.588) !important; /* Change border color to red */
+}
+
+.custom-table .table {
+  border-collapse: collapse; /* Ensure borders are collapsed */
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid rgb(141, 141, 141); /* Change border color for table cells to red */
+}
+
+.custom-table {
+  border-radius: 0.1rem;
+  overflow: hidden;
+}
+
+.table-header {
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+.table-row-label {
+  font-weight: bold;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.badge-warning {
+  background: #ffc107;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: 600;
+}
+
+.pricing-card-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #212529;
+  line-height: 1.1;
+}
+
+.price-amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: -webkit-linear-gradient(#0d57e1, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.price-currency {
+  font-size: 1.5rem;
+  color: #6c757d;
+  vertical-align: top;
+}
+
+.price-recurring {
+  font-size: 1.2rem;
+  color: #007bff;
+  display: block;
+  margin-top: 8px;
+}
+
+ul.list-unstyled li {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+ul.list-unstyled li i {
+  margin-right: 10px;
+}
+
+.pricing-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.btn-gradient {
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  border: none;
+  font-weight: 700;
+  color: white;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .pricing-card-title {
+    font-size: 2.2rem;
+  }
+
+  .price-amount {
+    font-size: 3rem;
+  }
+
+  .price-currency {
+    font-size: 1.25rem;
+  }
+}

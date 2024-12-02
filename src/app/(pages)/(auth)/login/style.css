@@ -1,0 +1,140 @@
+.login_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.login_innerBox {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login_footer button {
+  background-color: darkturquoise;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.login_footer button:hover {
+  background: rgb(19, 175, 240);
+}
+
+.login_footer p span a {
+  font-weight: bold;
+  color: #4b8ef1 !important;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.login_error {
+  color: red;
+}
+.login_method {
+  display: flex;
+
+  .btn {
+    border-color: #000;
+    margin-left: 3px;
+  }
+}
+.login_p {
+  color: #000;
+}
+@media screen and (max-width: 900px) {
+  .login_innerBox {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login_innerBox {
+    max-width: 300px;
+  }
+}
+/* .login_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login_innerBox {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login_footer button {
+  background-color: darkturquoise;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.login_footer button:hover {
+  background: rgb(19, 175, 240);
+}
+
+.login_footer p span a {
+  font-weight: bold;
+  color: #4b8ef1 !important;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.login_error {
+  color: red;
+}
+.login_method {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  .btn {
+    border-color: #000;
+    margin-left: 3px;
+    width: 30%;
+  }
+}
+.login_p {
+  color: #000;
+}
+@media screen and (max-width: 900px) {
+  .login_innerBox {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login_innerBox {
+    max-width: 300px;
+  }
+} */
